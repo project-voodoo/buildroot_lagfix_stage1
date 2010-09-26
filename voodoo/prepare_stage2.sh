@@ -10,14 +10,15 @@ find \
 	usr/sbin/mke2fs \
 	usr/sbin/e2fsck \
 	usr/sbin/blkid \
+	usr/sbin/tune2fs \
 	usr/lib/libext2fs.* \
 	usr/lib/libblkid.* \
 	usr/lib/libuuid.* \
 	usr/lib/libss.so* \
 	usr/lib/libe2p.* \
 	usr/lib/libcom_err.* \
-	| cpio -v -H newc -o | xz -e -9  > ../../voodoo/stage2.cpio.xz
+	| cpio -v -H newc -o | xz -e -9  > ../../voodoo/stages/stage2.cpio.xz
 
 cd ../../voodoo
 
-ls -lh stage2*
+ls -lh stages/*
